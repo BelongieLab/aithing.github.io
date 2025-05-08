@@ -1,13 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>AIThing</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The AI Thing">
+    <meta name="author" content="Soren Hauberg, Serge Belongie">
+    
+    <title>The AI Thing</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
+    
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+      .iceland-regular {
+        font-family: "Iceland", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+div {
+  text-align: center;
+}
+
+
+span {
+  padding: 1.5rem;
+  font-size: 1rem;
+}
+
+span.strong-hover-shake:hover {
+  animation: tilt-shaking 0.15s infinite;
+}
+
+span.gentle-hover-shake:hover {
+  animation: tilt-shaking 0.25s infinite;
+}
+
+span.gentle-tilt-move-shake:hover {
+  animation: tilt-n-move-shaking 0.25s infinite;
+}
+
+span.strong-tilt-move-shake:hover {
+  animation: tilt-n-move-shaking 0.15s infinite;
+}
+
+span.constant-tilt-shake {
+  animation: tilt-shaking 0.3s infinite;
+}
+
+span.vertical-shake {
+  animation: vertical-shaking 0.35s infinite;
+}
+
+span.horizontal-shake {
+  animation: horizontal-shaking 0.35s infinite;
+}
+
+span.rise-shake {
+  animation: jump-shaking 0.83s infinite;
+}
+
+span.skew-shake-x {
+  animation: skew-x-shake 1.3s infinite;
+}
+
+span.skew-shake-y {
+  animation: skew-y-shake 1.3s infinite;
+}
+
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(1deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-1deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes tilt-n-move-shaking {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, 5px) rotate(1deg); }
+  50% { transform: translate(0, 0) rotate(0eg); }
+  75% { transform: translate(-5px, 5px) rotate(-1deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes vertical-shaking {
+  0% { transform: translateY(0) }
+  25% { transform: translateY(5px) }
+  50% { transform: translateY(-5px) }
+  75% { transform: translateY(5px) }
+  100% { transform: translateY(0) }
+}
+
+@keyframes horizontal-shaking {
+  0% { transform: translateX(0) }
+  25% { transform: translateX(5px) }
+  50% { transform: translateX(-5px) }
+  75% { transform: translateX(5px) }
+  100% { transform: translateX(0) }
+}
+
+@keyframes jump-shaking {
+  0% { transform: translateX(0) }
+  25% { transform: translateY(-9px) }
+  35% { transform: translateY(-9px) rotate(1deg) }
+  55% { transform: translateY(-9px) rotate(-1deg) }
+  65% { transform: translateY(-9px) rotate(1deg) }
+  75% { transform: translateY(-9px) rotate(-1deg) }
+  100% { transform: translateY(0) rotate(0) }
+}
+
+@keyframes skew-x-shake {
+  0% { transform: skewX(-1deg); }
+  5% { transform: skewX(1deg); }
+  10% { transform: skewX(-1deg); }
+  15% { transform: skewX(1deg); }
+  20% { transform: skewX(0deg); }
+  100% { transform: skewX(0deg); }  
+}
+
+@keyframes skew-y-shake {
+  0% { transform: skewY(-1deg); }
+  5% { transform: skewY(1deg); }
+  10% { transform: skewY(-1deg); }
+  15% { transform: skewY(1deg); }
+  20% { transform: skewY(0deg); }
+  100% { transform: skewY(0deg); }  
+}
+    </style>
+       
+  </head>
 <body>
-  <p id="random-message"></p>
-  <script src="script.js"></script>
+  <span class="iceland-regular gentle-shake gentle-tilt-move-shake" style="width: 95%; font-size: 10.0vw;position: absolute; top: 40%; bottom: 40%; text-align:center;">some þing is coming...</span>
 </body>
 </html>
+
+
+
