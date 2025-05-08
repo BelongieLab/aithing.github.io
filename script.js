@@ -1,10 +1,9 @@
-const wallpapers = [
-  'wallpapers/aurora.png'
-  // Add more wallpaper filenames here
-];
-
-const wallpaper = wallpapers[Math.floor(Math.random() * wallpapers.length)];
-document.body.style.backgroundImage = `url('${wallpaper}')`;
+fetch('wallpapers.json')
+  .then(response => response.json())
+  .then(images => {
+    const wallpaper = images[Math.floor(Math.random() * images.length)];
+    document.body.style.backgroundImage = `url('${wallpaper}')`;
+  });
 
 fetch('messages.txt')
   .then(response => response.text())
