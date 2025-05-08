@@ -1,5 +1,5 @@
 const wallpapers = [
-  'wallpapers/aurora.jpg'
+  'wallpapers/aurora.png'
   // Add more wallpaper filenames here
 ];
 
